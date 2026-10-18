@@ -4,77 +4,128 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101723">
-  <meta name="description" content="CodeX Hub — भारत से कोडिंग और उपयोगी डिजिटल टूल्स।">
-  <title>CodeX Hub — Home</title>
+  <meta name="description" content="CodeX Hub India — useful tools built with good code.">
+  <title>CodeX Hub India — Apps &amp; Tools</title>
   <style>
-    :root{color-scheme:dark;--bg:#101723;--panel:#182332;--text:#f4f7fb;--muted:#aab8c8;--accent:#f2a65a;--line:#2a3a4d;--green:#3bd29a}
+    :root{color-scheme:dark;--bg:#101723;--panel:#192637;--panel2:#202f40;--text:#f4f7fb;--muted:#a9b8c9;--line:#2d3e52;--orange:#f2a65a;--green:#3bd29a}
     *{box-sizing:border-box}
-    body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 80% 0%,#233950 0,transparent 42%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+    html{scroll-behavior:smooth}
+    body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 82% 0,#273d55 0,transparent 40%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+    a{color:inherit}
     .wrap{width:min(1100px,calc(100% - 40px));margin:auto}
     header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-    .brand{font-size:1.25rem;font-weight:800;letter-spacing:.2px}.brand span{color:var(--accent)}
-    button,.button{font:inherit;border:0;border-radius:12px;padding:11px 16px;cursor:pointer;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform .18s,filter .18s}
+    .brand{font-size:1.25rem;font-weight:850;letter-spacing:.2px;text-decoration:none}
+    .brand span{color:var(--orange)}
+    .header-right{display:flex;align-items:center;gap:18px}
+    .nav-link{color:var(--muted);font-size:.94rem;text-decoration:none}
+    .nav-link:hover{color:var(--text)}
+    button,.button{font:inherit;border:0;border-radius:12px;padding:11px 16px;cursor:pointer;text-decoration:none;font-weight:750;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform .18s,filter .18s}
     button:hover,.button:hover{transform:translateY(-2px);filter:brightness(1.08)}
+    button:focus-visible,a:focus-visible{outline:3px solid #86d6b8;outline-offset:3px}
     .lang{background:#26374a;color:var(--text);border:1px solid #3a4c60}
-    main{padding:76px 0 68px}
-    .hero{display:grid;grid-template-columns:1.3fr .7fr;gap:55px;align-items:center;min-height:390px}
-    .eyebrow{color:var(--green);font-weight:750;letter-spacing:.08em;text-transform:uppercase;font-size:.86rem}
-    h1{font-size:clamp(2.7rem,7vw,5.4rem);line-height:1.06;letter-spacing:-.045em;margin:12px 0 20px}
-    h1 span{color:var(--accent)}
-    .intro{max-width:650px;color:var(--muted);font-size:1.17rem;margin:0 0 28px}
-    .actions{display:flex;flex-wrap:wrap;gap:12px}.primary{background:var(--accent);color:#24190e}.secondary{background:transparent;color:var(--text);border:1px solid #516174}
-    .card{background:linear-gradient(145deg,rgba(32,49,68,.95),rgba(23,35,49,.95));border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 24px 80px #050a1170}
-    .card-icon{font-size:2rem}.card h2{margin:8px 0;font-size:1.35rem}.card p{color:var(--muted);margin:0}
-    .tag{display:inline-block;margin-top:20px;border-radius:999px;padding:5px 11px;background:#214437;color:#a4f0d2;font-size:.84rem}
-    .about{border-top:1px solid var(--line);padding:32px 0 46px;display:flex;align-items:center;justify-content:space-between;gap:30px}.about h2{margin:0;font-size:1.35rem}.about p{color:var(--muted);max-width:700px;margin:6px 0 0}
+    main{padding:60px 0 50px}
+    .hero{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:28px;padding:clamp(28px,6vw,66px);background:linear-gradient(120deg,rgba(25,38,55,.96),rgba(22,34,49,.78))}
+    .hero:after{content:"</>";position:absolute;right:5%;top:8%;font:800 clamp(5rem,16vw,12rem)/1 ui-monospace,monospace;color:#ffffff08;pointer-events:none}
+    .eyebrow{position:relative;color:var(--green);font-weight:800;letter-spacing:.09em;text-transform:uppercase;font-size:.86rem}
+    h1{position:relative;max-width:750px;font-size:clamp(2.5rem,6vw,4.6rem);line-height:1.08;letter-spacing:-.045em;margin:12px 0 20px}
+    h1 span{color:var(--orange)}
+    .intro{position:relative;max-width:670px;color:var(--muted);font-size:1.12rem;margin:0 0 27px}
+    .actions{position:relative;display:flex;flex-wrap:wrap;gap:12px}
+    .primary{background:var(--orange);color:#24190e}
+    .secondary{background:transparent;color:var(--text);border:1px solid #516174}
+    .tools{padding:58px 0 38px}
+    .section-top{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:22px}
+    .section-kicker{color:var(--green);font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    h2{margin:5px 0 0;font-size:clamp(1.65rem,3vw,2.1rem);line-height:1.2}
+    .section-copy{margin:0;color:var(--muted);max-width:470px}
+    .tool-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .tool-card,.coming-card{min-height:225px;border:1px solid var(--line);border-radius:22px;padding:24px;background:linear-gradient(145deg,rgba(32,49,68,.96),rgba(23,35,49,.96))}
+    .tool-card{display:flex;flex-direction:column;text-decoration:none;box-shadow:0 18px 55px #050a1140;transition:transform .2s,border-color .2s,box-shadow .2s}
+    .tool-card:hover{transform:translateY(-4px);border-color:#57728d;box-shadow:0 24px 65px #050a1166}
+    .tool-head{display:flex;justify-content:space-between;align-items:flex-start;gap:15px}
+    .tool-icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:#214437;color:#a4f0d2;font-size:1.5rem}
+    .pill{border:1px solid #376c57;color:#a4f0d2;background:#1d3a31;border-radius:999px;padding:4px 10px;font-size:.78rem;font-weight:700}
+    .tool-card h3,.coming-card h3{font-size:1.3rem;margin:18px 0 7px}
+    .tool-card p,.coming-card p{color:var(--muted);margin:0}
+    .tool-cta{margin-top:auto;padding-top:20px;color:var(--orange);font-weight:800}
+    .coming-card{background:rgba(25,38,55,.52);border-style:dashed}
+    .coming-card .tool-icon{background:#273548;color:#c1cedc}
+    .about{border-top:1px solid var(--line);padding:34px 0 42px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+    .about h2{margin:0;font-size:1.35rem}.about p{color:var(--muted);max-width:700px;margin:6px 0 0}
     footer{border-top:1px solid var(--line);padding:20px 0 26px;color:var(--muted);text-align:center;font-size:.92rem}
-    @media(max-width:720px){.wrap{width:min(100% - 28px,540px)}header{height:70px}main{padding:52px 0}.hero{grid-template-columns:1fr;gap:28px;min-height:0}.card{max-width:440px}.about{align-items:flex-start;flex-direction:column}}
+    @media(max-width:720px){.wrap{width:min(100% - 28px,560px)}header{height:70px}.header-right{gap:10px}.nav-link{display:none}main{padding:35px 0}.hero{border-radius:22px}.section-top{align-items:flex-start;flex-direction:column}.tool-grid{grid-template-columns:1fr}.tool-card,.coming-card{min-height:205px}.about{align-items:flex-start;flex-direction:column}}
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <div class="brand">Code<span>X</span> Hub</div>
-      <button class="lang" id="languageToggle" type="button" aria-label="Switch language">English</button>
+      <a class="brand" href="./" aria-label="CodeX Hub India home">Code<span>X</span> Hub</a>
+      <div class="header-right">
+        <a class="nav-link" href="#tools" data-hi="मेरे टूल्स" data-en="My tools">मेरे टूल्स</a>
+        <button class="lang" id="languageToggle" type="button" aria-label="Switch language">English</button>
+      </div>
     </header>
     <main>
       <section class="hero" aria-labelledby="headline">
-        <div>
-          <div class="eyebrow" data-hi="भारत से, कोडिंग के साथ" data-en="From India, building with code">भारत से, कोडिंग के साथ</div>
-          <h1 id="headline" data-hi-html="नमस्ते, मैं हूँ <span>CodeX Hub</span>" data-en-html="Hello, I'm <span>CodeX Hub</span>">नमस्ते, मैं हूँ <span>CodeX Hub</span></h1>
-          <p class="intro" data-hi="मैं भारत से हूँ। मुझे कोडिंग पसंद है और मैं साफ़, अच्छी कोडिंग से उपयोगी डिजिटल चीज़ें बनाता हूँ। यहाँ मेरे प्रोजेक्ट और छोटे टूल्स मिलेंगे।" data-en="I’m from India. I enjoy coding and take pride in writing good, clear code to build useful digital tools. Explore my projects and handy tools here.">मैं भारत से हूँ। मुझे कोडिंग पसंद है और मैं साफ़, अच्छी कोडिंग से उपयोगी डिजिटल चीज़ें बनाता हूँ। यहाँ मेरे प्रोजेक्ट और छोटे टूल्स मिलेंगे।</p>
-          <div class="actions">
-            <a class="button primary" href="activities.html"><span aria-hidden="true">✓</span><span data-hi="गतिविधि ट्रैकर खोलें" data-en="Open Activity Tracker">गतिविधि ट्रैकर खोलें</span></a>
-            <a class="button secondary" href="#about"><span data-hi="मेरे बारे में" data-en="About">मेरे बारे में</span><span aria-hidden="true">↓</span></a>
-          </div>
+        <div class="eyebrow" data-hi="भारत से · कोडिंग के साथ" data-en="From India · Built with code">भारत से · कोडिंग के साथ</div>
+        <h1 id="headline" data-hi-html="नमस्ते, स्वागत है <span>CodeX Hub</span> पर" data-en-html="Welcome to <span>CodeX Hub</span>">नमस्ते, स्वागत है <span>CodeX Hub</span> पर</h1>
+        <p class="intro" data-hi="मैं भारत से हूँ। मुझे कोडिंग पसंद है और मैं अच्छी, साफ़ कोडिंग से उपयोगी डिजिटल टूल्स बनाता हूँ। मेरे तैयार प्रोजेक्ट नीचे देखें।" data-en="I’m from India. I enjoy coding and use good, clear code to build useful digital tools. Explore my finished projects below.">मैं भारत से हूँ। मुझे कोडिंग पसंद है और मैं अच्छी, साफ़ कोडिंग से उपयोगी डिजिटल टूल्स बनाता हूँ। मेरे तैयार प्रोजेक्ट नीचे देखें।</p>
+        <div class="actions">
+          <a class="button primary" href="#tools"><span data-hi="टूल्स देखें" data-en="Explore tools">टूल्स देखें</span><span aria-hidden="true">↓</span></a>
+          <a class="button secondary" href="#about"><span data-hi="मेरे बारे में" data-en="About me">मेरे बारे में</span></a>
         </div>
-        <aside class="card">
-          <div class="card-icon" aria-hidden="true">⌘</div>
-          <h2 data-hi="मेरा पहला टूल" data-en="My first tool">मेरा पहला टूल</h2>
-          <p data-hi="अपनी रोज़ की गतिविधियाँ लिखें, पूरा होने पर चेक करें और अपनी हिस्ट्री संभालें। हिंदी और English दोनों में।" data-en="Record daily activities, check them off when complete, and keep a history. Available in Hindi and English.">अपनी रोज़ की गतिविधियाँ लिखें, पूरा होने पर चेक करें और अपनी हिस्ट्री संभालें। हिंदी और English दोनों में।</p>
-          <span class="tag" data-hi="हिंदी + English" data-en="Hindi + English">हिंदी + English</span>
-        </aside>
       </section>
+
+      <section class="tools" id="tools" aria-labelledby="toolsTitle">
+        <div class="section-top">
+          <div>
+            <div class="section-kicker" data-hi="कोडएक्स हब · लाइब्रेरी" data-en="CodeX Hub · Library">कोडएक्स हब · लाइब्रेरी</div>
+            <h2 id="toolsTitle" data-hi="तैयार टूल्स" data-en="Ready-to-use tools">तैयार टूल्स</h2>
+          </div>
+          <p class="section-copy" data-hi="यहाँ मेरे पूरे और प्रकाशित ऐप्स मिलेंगे। नए टूल्स तैयार होते ही इस सूची में जोड़े जाएँगे।" data-en="Find my completed and published apps here. New tools will be added as they’re ready.">यहाँ मेरे पूरे और प्रकाशित ऐप्स मिलेंगे। नए टूल्स तैयार होते ही इस सूची में जोड़े जाएँगे।</p>
+        </div>
+        <div class="tool-grid">
+          <a class="tool-card" href="target.html" aria-label="Open the activity tracker">
+            <div class="tool-head">
+              <div class="tool-icon" aria-hidden="true">✓</div>
+              <span class="pill" data-hi="पहला टूल" data-en="First tool">पहला टूल</span>
+            </div>
+            <h3 data-hi="गतिविधि ट्रैकर" data-en="Activity Tracker">गतिविधि ट्रैकर</h3>
+            <p data-hi="रोज़ की गतिविधियाँ दर्ज करें, पूरी होने पर टिक करें और तारीख़ के अनुसार हिस्ट्री देखें। हिंदी और English में उपलब्ध।" data-en="Record daily activities, check them off when done, and browse history by date. Available in Hindi and English.">रोज़ की गतिविधियाँ दर्ज करें, पूरी होने पर टिक करें और तारीख़ के अनुसार हिस्ट्री देखें। हिंदी और English में उपलब्ध।</p>
+            <span class="tool-cta"><span data-hi="टूल खोलें" data-en="Open tool">टूल खोलें</span> <span aria-hidden="true">→</span></span>
+          </a>
+          <article class="coming-card">
+            <div class="tool-head">
+              <div class="tool-icon" aria-hidden="true">＋</div>
+              <span class="pill" data-hi="जल्द आ रहा है" data-en="Coming soon">जल्द आ रहा है</span>
+            </div>
+            <h3 data-hi="अगला टूल" data-en="Next tool">अगला टूल</h3>
+            <p data-hi="जब अगला ऐप पूरा और प्रकाशित होगा, उसकी जानकारी यहाँ जोड़ी जाएगी।" data-en="When the next app is finished and published, its details will appear here.">जब अगला ऐप पूरा और प्रकाशित होगा, उसकी जानकारी यहाँ जोड़ी जाएगी।</p>
+          </article>
+        </div>
+      </section>
+
       <section class="about" id="about">
         <div>
           <h2 data-hi="मेरे बारे में" data-en="About me">मेरे बारे में</h2>
-          <p data-hi="मैं भारत से एक कोडिंग प्रेमी हूँ। मेरा लक्ष्य अच्छी कोडिंग के ज़रिए ऐसी चीज़ें बनाना है जो रोज़मर्रा के काम आसान करें।" data-en="I’m a coding enthusiast from India. My goal is to use good code to make things that help with everyday tasks.">मैं भारत से एक कोडिंग प्रेमी हूँ। मेरा लक्ष्य अच्छी कोडिंग के ज़रिए ऐसी चीज़ें बनाना है जो रोज़मर्रा के काम आसान करें।</p>
+          <p data-hi="मैं भारत से एक कोडिंग प्रेमी हूँ। मेरा लक्ष्य अच्छी कोडिंग से ऐसे डिजिटल टूल्स बनाना है जो रोज़मर्रा के काम आसान करें।" data-en="I’m a coding enthusiast from India. My goal is to use good code to create digital tools that make everyday tasks easier.">मैं भारत से एक कोडिंग प्रेमी हूँ। मेरा लक्ष्य अच्छी कोडिंग से ऐसे डिजिटल टूल्स बनाना है जो रोज़मर्रा के काम आसान करें।</p>
         </div>
-        <a class="button secondary" href="activities.html" data-hi="टूल देखें →" data-en="Explore the tool →">टूल देखें →</a>
+        <a class="button secondary" href="target.html"><span data-hi="पहला टूल खोलें" data-en="Open the first tool">पहला टूल खोलें</span><span aria-hidden="true">→</span></a>
       </section>
     </main>
     <footer>🇮🇳 <span data-hi="Made in India" data-en="Made in India">Made in India</span></footer>
   </div>
   <script>
-    const toggle=document.getElementById('languageToggle');
-    let language='hi';
-    toggle.addEventListener('click',()=>{
-      language=language==='hi'?'en':'hi';
+    const toggle=document.getElementById("languageToggle");
+    let language="hi";
+    toggle.addEventListener("click",()=>{
+      language=language==="hi"?"en":"hi";
       document.documentElement.lang=language;
-      document.querySelectorAll('[data-hi],[data-en]').forEach(el=>{el.textContent=el.dataset[language]});
-      document.querySelectorAll('[data-hi-html],[data-en-html]').forEach(el=>{el.innerHTML=el.dataset[language==='hi'?'hiHtml':'enHtml']});
-      toggle.textContent=language==='hi'?'English':'हिन्दी';
+      document.querySelectorAll("[data-hi],[data-en]").forEach(el=>{el.textContent=el.dataset[language]});
+      document.querySelectorAll("[data-hi-html],[data-en-html]").forEach(el=>{el.innerHTML=el.dataset[language==="hi"?"hiHtml":"enHtml"]});
+      toggle.textContent=language==="hi"?"English":"हिन्दी";
     });
   </script>
 </body>
 </html>
+
