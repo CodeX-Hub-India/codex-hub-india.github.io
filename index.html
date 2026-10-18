@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101723">
+  <meta name="description" content="CodeX Hub — भारत से कोडिंग और उपयोगी डिजिटल टूल्स।">
+  <title>CodeX Hub — Home</title>
+  <style>
+    :root{color-scheme:dark;--bg:#101723;--panel:#182332;--text:#f4f7fb;--muted:#aab8c8;--accent:#f2a65a;--line:#2a3a4d;--green:#3bd29a}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 80% 0%,#233950 0,transparent 42%),var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}
+    .wrap{width:min(1100px,calc(100% - 40px));margin:auto}
+    header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font-size:1.25rem;font-weight:800;letter-spacing:.2px}.brand span{color:var(--accent)}
+    button,.button{font:inherit;border:0;border-radius:12px;padding:11px 16px;cursor:pointer;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform .18s,filter .18s}
+    button:hover,.button:hover{transform:translateY(-2px);filter:brightness(1.08)}
+    .lang{background:#26374a;color:var(--text);border:1px solid #3a4c60}
+    main{padding:76px 0 68px}
+    .hero{display:grid;grid-template-columns:1.3fr .7fr;gap:55px;align-items:center;min-height:390px}
+    .eyebrow{color:var(--green);font-weight:750;letter-spacing:.08em;text-transform:uppercase;font-size:.86rem}
+    h1{font-size:clamp(2.7rem,7vw,5.4rem);line-height:1.06;letter-spacing:-.045em;margin:12px 0 20px}
+    h1 span{color:var(--accent)}
+    .intro{max-width:650px;color:var(--muted);font-size:1.17rem;margin:0 0 28px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}.primary{background:var(--accent);color:#24190e}.secondary{background:transparent;color:var(--text);border:1px solid #516174}
+    .card{background:linear-gradient(145deg,rgba(32,49,68,.95),rgba(23,35,49,.95));border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 24px 80px #050a1170}
+    .card-icon{font-size:2rem}.card h2{margin:8px 0;font-size:1.35rem}.card p{color:var(--muted);margin:0}
+    .tag{display:inline-block;margin-top:20px;border-radius:999px;padding:5px 11px;background:#214437;color:#a4f0d2;font-size:.84rem}
+    .about{border-top:1px solid var(--line);padding:32px 0 46px;display:flex;align-items:center;justify-content:space-between;gap:30px}.about h2{margin:0;font-size:1.35rem}.about p{color:var(--muted);max-width:700px;margin:6px 0 0}
+    footer{border-top:1px solid var(--line);padding:20px 0 26px;color:var(--muted);text-align:center;font-size:.92rem}
+    @media(max-width:720px){.wrap{width:min(100% - 28px,540px)}header{height:70px}main{padding:52px 0}.hero{grid-template-columns:1fr;gap:28px;min-height:0}.card{max-width:440px}.about{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">Code<span>X</span> Hub</div>
+      <button class="lang" id="languageToggle" type="button" aria-label="Switch language">English</button>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="headline">
+        <div>
+          <div class="eyebrow" data-hi="भारत से, कोडिंग के साथ" data-en="From India, building with code">भारत से, कोडिंग के साथ</div>
+          <h1 id="headline" data-hi-html="नमस्ते, मैं हूँ <span>CodeX Hub</span>" data-en-html="Hello, I'm <span>CodeX Hub</span>">नमस्ते, मैं हूँ <span>CodeX Hub</span></h1>
+          <p class="intro" data-hi="मैं भारत से हूँ। मुझे कोडिंग पसंद है और मैं साफ़, अच्छी कोडिंग से उपयोगी डिजिटल चीज़ें बनाता हूँ। यहाँ मेरे प्रोजेक्ट और छोटे टूल्स मिलेंगे।" data-en="I’m from India. I enjoy coding and take pride in writing good, clear code to build useful digital tools. Explore my projects and handy tools here.">मैं भारत से हूँ। मुझे कोडिंग पसंद है और मैं साफ़, अच्छी कोडिंग से उपयोगी डिजिटल चीज़ें बनाता हूँ। यहाँ मेरे प्रोजेक्ट और छोटे टूल्स मिलेंगे।</p>
+          <div class="actions">
+            <a class="button primary" href="activities.html"><span aria-hidden="true">✓</span><span data-hi="गतिविधि ट्रैकर खोलें" data-en="Open Activity Tracker">गतिविधि ट्रैकर खोलें</span></a>
+            <a class="button secondary" href="#about"><span data-hi="मेरे बारे में" data-en="About">मेरे बारे में</span><span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <aside class="card">
+          <div class="card-icon" aria-hidden="true">⌘</div>
+          <h2 data-hi="मेरा पहला टूल" data-en="My first tool">मेरा पहला टूल</h2>
+          <p data-hi="अपनी रोज़ की गतिविधियाँ लिखें, पूरा होने पर चेक करें और अपनी हिस्ट्री संभालें। हिंदी और English दोनों में।" data-en="Record daily activities, check them off when complete, and keep a history. Available in Hindi and English.">अपनी रोज़ की गतिविधियाँ लिखें, पूरा होने पर चेक करें और अपनी हिस्ट्री संभालें। हिंदी और English दोनों में।</p>
+          <span class="tag" data-hi="हिंदी + English" data-en="Hindi + English">हिंदी + English</span>
+        </aside>
+      </section>
+      <section class="about" id="about">
+        <div>
+          <h2 data-hi="मेरे बारे में" data-en="About me">मेरे बारे में</h2>
+          <p data-hi="मैं भारत से एक कोडिंग प्रेमी हूँ। मेरा लक्ष्य अच्छी कोडिंग के ज़रिए ऐसी चीज़ें बनाना है जो रोज़मर्रा के काम आसान करें।" data-en="I’m a coding enthusiast from India. My goal is to use good code to make things that help with everyday tasks.">मैं भारत से एक कोडिंग प्रेमी हूँ। मेरा लक्ष्य अच्छी कोडिंग के ज़रिए ऐसी चीज़ें बनाना है जो रोज़मर्रा के काम आसान करें।</p>
+        </div>
+        <a class="button secondary" href="activities.html" data-hi="टूल देखें →" data-en="Explore the tool →">टूल देखें →</a>
+      </section>
+    </main>
+    <footer>🇮🇳 <span data-hi="Made in India" data-en="Made in India">Made in India</span></footer>
+  </div>
+  <script>
+    const toggle=document.getElementById('languageToggle');
+    let language='hi';
+    toggle.addEventListener('click',()=>{
+      language=language==='hi'?'en':'hi';
+      document.documentElement.lang=language;
+      document.querySelectorAll('[data-hi],[data-en]').forEach(el=>{el.textContent=el.dataset[language]});
+      document.querySelectorAll('[data-hi-html],[data-en-html]').forEach(el=>{el.innerHTML=el.dataset[language==='hi'?'hiHtml':'enHtml']});
+      toggle.textContent=language==='hi'?'English':'हिन्दी';
+    });
+  </script>
+</body>
+</html>
